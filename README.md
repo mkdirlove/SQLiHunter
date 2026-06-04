@@ -26,15 +26,15 @@ go install -v github.com/projectdiscovery/katana/cmd/katana@latest
 ### Build SQLiHunter
 
 ```bash
-git clone https://github.com/yourusername/SQLiHunter.git
+git clone https://github.com/mkdirlove/SQLiHunter.git
 cd SQLiHunter
-go build -o sqliscanner .
+go build -o SQLiHunter .
 ```
 
 ## Usage
 
 ```bash
-./sqliscanner -u <target_url> [-o output_file] [-t threads] [-timeout seconds] [-d depth] [-v]
+./SQLiHunter -u <target_url> [-o output_file] [-t threads] [-timeout seconds] [-d depth] [-v]
 ```
 
 ### Options
@@ -52,16 +52,16 @@ go build -o sqliscanner .
 
 ```bash
 # Basic scan with default depth
-./sqliscanner -u https://example.com
+./SQLiHunter -u https://example.com
 
 # Verbose scan to see all endpoints found
-./sqliscanner -u https://example.com -v
+./SQLiHunter -u https://example.com -v
 
 # Unlimited depth crawling
-./sqliscanner -u https://example.com -d 0
+./SQLiHunter -u https://example.com -d 0
 
 # Scan with output file and more threads
-./sqliscanner -u https://example.com -o results.txt -t 50 -timeout 30
+./SQLiHunter -u https://example.com -o results.txt -t 50 -timeout 30
 ```
 
 ## How It Works
